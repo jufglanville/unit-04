@@ -1,0 +1,95 @@
+// **********************************************
+// _grid.scss
+// styles related to the grid system and
+// main container.
+// major grid styles have been added here for you
+// but additional styling may be needed
+// **********************************************
+
+
+// grid base class
+.grid {
+
+    // .grid__row
+    &__row {
+        padding: 1em 10px;
+        @include flex($direction: column) {
+
+        };
+
+        // NOTE: replace with media query mixin if aiming for exceeds
+        @include mq(desktop) {
+            flex-direction: row;
+        }
+        @include mq(max) {
+            flex-direction: row;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    } 
+
+    // .grid__col
+    &__col {
+
+        // create grid columns dynamically
+        // loop through each column size
+        @for $i from 1 through 12 {
+
+            // concatenate CSS selector, ie when $i = 1,
+            // selector would be .grid__col--1
+            &--#{$i} {
+
+                // base styles applied to all grid columns 
+                // NOTE: could be converted to a placeholder, along with margin
+                // from the  media query
+                @extend %grid__col;
+
+                // NOTE: replace with media query mixin if aiming for exceeds
+                @include mq(desktop) {
+
+                    // base stlyes applied to all grid columns
+                    margin-top: 0;
+                    text-align: center;
+
+                    // make column width a percentage of the column number / total columns
+                    flex-basis: #{$i / 12 * 100 + "%"} ;
+                }
+            }
+        }
+    }
+}
+
+// targets all elements with classes that begin with grid__col
+[class^=grid__col] {
+    // grid__col + grid__col, targets two sibling columns
+    & + & {
+
+        // NOTE: replace with media query mixin if aiming for exceeds
+        @include mq(desktop) {
+
+            // add grid gutter
+            margin-left: em(10px);
+        }
+    }
+}
+
+// Grid System
+
+.theme__colors.grid__col {
+    @include bg-colors($grid-colors);
+}
+
+.theme__colors.grid__col {
+    @for $i from 1 through 12 {
+        &--#{$i} {
+            @extend %btn;
+
+        }
+    }
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+

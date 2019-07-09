@@ -1,0 +1,97 @@
+// ---------------------------------------------------------
+// ---------------------- Variables ------------------------
+// ---------------------------------------------------------
+// Breakpoints
+
+$break-mobile    : 480px;
+$break-desktop   : 768px;
+$break-max       : 1400px;
+
+// Font Stacks
+
+$font-url--google           : 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap';
+
+$font-family--primary       : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary     : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weight Variables
+
+$font-weight--thin          : 100;
+$font-weight--light         : 300;
+$font-weight--medium        : 400;
+$font-weight--bold          : 700;
+$font-weight--ultra-bold    : 900;
+
+// Colour Variables
+
+$white            : #fff;
+$black            : #0b0b0b;
+$grey             : #797e83;
+ 
+$bermuda          : #7FDEC2; 
+$malibu           : #79DAF8; 
+$de-york          : #7EC989; 
+$new-york-pink    : #D67B7D; 
+$burnt-sienna     : #ED7F5F; 
+$purple-majesty   : #8E7DBC; 
+
+$french-lilac     : #D7B4EA;
+$fountain-blue    : #5EA9C7;
+$petite-orchid    : #DD9FA1;
+$tacao            : #F0A38A;
+
+// Color Usage
+
+$color-primary      : $bermuda;
+$color-default      : $malibu;
+$color-secondary    : $purple-majesty;
+$color-accent       : $malibu;
+$color-shadow       : rgba($black, .2);
+
+// Color Palette Modifiers
+
+$palettes: (
+    grey: (
+        xx-light: lighten($grey, 43%),
+        x-light : lighten($grey, 35%),
+        light   : lighten($grey, 12%),
+        base    : $grey,
+        dark    : darken($grey, 8%),
+        x-dark  : darken($grey, 16%)
+    ),
+    black: (
+        light   : lighten($black, 10%),
+        base    : $black,
+        dark    : darken($black, 10%)
+    )
+);
+
+// UI Colors
+
+$ui-colors: (
+    primary : $bermuda,
+    default : $malibu,
+    success : $de-york,
+    error   : $new-york-pink,
+    warning : $burnt-sienna,
+    info    : $purple-majesty
+);
+
+// Text
+
+$base__font-size    : 16px;
+$base__line         : 24px;
+    
+
+// Grid Colours
+
+$grid-colors: (
+    3   : $french-lilac,
+    4   : $color-default,
+    5   : $de-york,
+    6   : $fountain-blue,
+    7   : $petite-orchid,
+    8   : $tacao,
+    12  : $color-primary
+);
+

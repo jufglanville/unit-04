@@ -1,0 +1,38 @@
+// Navigation //
+
+.nav {
+    padding: 0;
+    @include e(item) {
+        @extend %nav-item-disp;
+        a {
+            @extend %nav-item-link;
+            &:hover {
+                @extend %nav-item-on;
+            } 
+        }
+    };
+    @include mq(desktop) {
+        text-align: right;
+        margin-right: 30px;
+        margin-top: 15px;
+        
+        li {
+            display: inline-flex;
+        }
+        
+        a {
+            padding: 15px;
+        }
+    };
+}
+
+
+
+
+
+
+
+
+
+
+

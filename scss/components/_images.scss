@@ -1,0 +1,18 @@
+// Images
+
+// Image frame
+
+.img--frame {
+    @extend %img-frame;
+    width: 100%;
+    max-width: em(400px);
+}
+
+
+// Center Images
+
+.img--logo,
+.img--avatar,
+.img--frame  {
+    @extend %center;
+  }

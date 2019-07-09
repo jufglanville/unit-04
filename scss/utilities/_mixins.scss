@@ -1,0 +1,52 @@
+// Mixins
+@mixin bg-colors($map) {
+    @each $theme, $color in $map {
+        &--#{$theme} {
+            background-color: $color;
+            @content;
+        }
+    }
+}
+
+
+// Media Query 
+
+@mixin mq($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (min-width: $break-mobile) { 
+            @content;
+        }
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: $break-desktop) {
+            @content;
+        }
+    }
+    @else if $breakpoint == max {
+        @media (min-width: $break-max) {
+            @content;
+        }
+    }
+}
+
+// Flex box
+
+@mixin flex($display:flex, $direction:row) {
+    display: $display;
+    flex-direction: $direction;
+    @content;
+}
+
+// BEM selectors
+
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}

@@ -1,0 +1,135 @@
+// Nav Items
+
+%nav-item-disp {
+    display: block;
+}
+
+%nav-item-link {
+    font-weight: $font-weight--light;
+    text-decoration: none;
+    display: flex;
+    flex: 1;
+    height: em(45px);
+    border-radius: em(5px);
+    align-items: center;
+    justify-content: center;
+    font-size: em(20px);
+    color: palette(grey);
+}
+
+%nav-item-on {
+    background-color: $color-primary;
+    color: $white;
+}
+
+
+// Link Items
+
+%link {
+    color: $color-default;
+    text-decoration: none;
+    font-weight: $font-weight--bold;
+    &:visited {
+        color: $color-default;
+    }
+}
+
+// Blockquote
+
+%blockquote {
+    width: 80%;
+    border-left: em(8px) solid $color-primary;
+    border-radius: em(5px) 0 0 em(5px);
+    font-style: italic;
+    margin: em(20px) auto;
+    padding-left: em(15px);
+    font-size: em(22px);
+}
+
+// button
+
+%btn {
+    display: block;
+    width: 100%;
+    padding: em(8px);
+    height: em(40px);
+    border: none;
+    border-radius: em(5px);
+}
+
+%btn-txt {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $font-weight--bold;
+}
+
+// Typography
+
+// Primary Header Style
+
+%headline--primary {
+    color: $color-primary;
+    margin-left: em(10px);
+    line-height: 1.2;
+}
+
+// Secondary Header Style
+
+%headline--secondary {
+    font-weight: $font-weight--light;
+    font-size: em(18px);
+}
+
+// Forms
+
+%form__input {
+    display: block;
+    width: 100%;
+    padding: em(15px);
+    border: none;
+    border-bottom: em(6px) solid $color-primary;
+    outline: none;
+
+    &::placeholder {
+        font-weight: $font-weight--bold;
+    }
+}
+
+
+// Images
+
+%img-frame {
+    padding: em(15px);
+    border: 1px solid rgba($grey, 0.5);
+}
+
+
+// Helpful Placeholders
+
+// Clearfix
+%clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+// Display Hide
+%hidden {
+    display: none;
+}
+
+// Center Element
+
+%center {
+    display: block;
+    text-align: center;
+    margin: em(20px) auto;
+  }
+
+
+%grid__col {
+    margin-top: em(10px);
+    flex-basis: 100%;
+}

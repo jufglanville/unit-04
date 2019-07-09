@@ -1,0 +1,22 @@
+// Buttons //
+
+.btn {
+    @include bg-colors($ui-colors) {
+        @extend %btn;
+        @extend %btn-txt;
+        margin: em(20px) 0;
+    };
+}
+
+// Media Query for Buttons
+.grid__col--12 {
+    @include mq(desktop) {
+        text-align: center;
+
+        .theme__colors {
+            width: 120px;
+            display: inline;
+            margin: 0 10px;
+        }
+    }
+}

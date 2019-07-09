@@ -1,0 +1,31 @@
+// Typography
+
+// Headers
+
+.headline--primary {
+    @extend %headline--primary;
+}
+
+.headline--secondary {
+    @extend %headline--secondary;
+    @include mq(max) {
+        max-width: 1400px;
+        margin: 0 auto;
+    };
+}
+
+// Links
+
+.link {
+    @extend %link;
+}
+
+// Blockquotes
+
+.blockquote {
+    @extend %blockquote;
+}
+
+.card {
+    text-align: left;
+}

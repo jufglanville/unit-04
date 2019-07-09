@@ -1,0 +1,9 @@
+// form
+
+.form__label--hidden {
+    @extend %hidden;
+}
+
+.form__input {
+    @extend %form__input;
+}
